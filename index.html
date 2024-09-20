@@ -7,42 +7,80 @@
     <title>Sanchar Saathi Portal</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
         header {
-            background-color: #2c3e50;
-            padding: 10px 0;
-            text-align: center;
+            background-color: #0056b3;
             color: white;
+            padding: 20px;
+            text-align: center;
         }
-        h1 {
+        header h1 {
             margin: 0;
+            font-size: 36px;
+        }
+        header p {
+            font-size: 18px;
         }
         main {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+        .service-box {
             padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
         }
-        section {
-            margin-bottom: 30px;
+        .service-box h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
         }
-        h2 {
-            color: #2980b9;
+        /* Add colorful background to each box */
+        .chakshu {
+            background-color: #ff6347; /* Red */
+        }
+        .ceir {
+            background-color: #1e90ff; /* Blue */
+        }
+        .tafcop {
+            background-color: #32cd32; /* Green */
+        }
+        .kym {
+            background-color: #ffb6c1; /* Pink */
+        }
+        .ricwin {
+            background-color: #ffa500; /* Orange */
+        }
+        .kyi {
+            background-color: #8a2be2; /* Purple */
         }
         footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #2c3e50;
+            background-color: #0056b3;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 10px;
+            text-align: center;
         }
-        a {
-            color: #2980b9;
+        footer a {
+            color: white;
             text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -50,39 +88,58 @@
 
 <header>
     <h1>Sanchar Saathi Portal</h1>
-    <p>A citizen-centric initiative to empower mobile subscribers, enhance their security, and promote awareness of government initiatives.</p>
+    <p>A citizen centric initiative to empower mobile subscribers, enhance their security , and promote awareness of government initiatives.
+</p>
 </header>
 
 <main>
     <section>
         <h2>About Sanchar Saathi</h2>
-        <p>The <strong>Sanchar Saathi</strong> portal is a government initiative to help mobile subscribers protect themselves against fraud, report stolen devices, and stay aware of important communication security measures.</p>
+        <p>The <strong>Sanchar Saathi</strong> portal is a government initiative by the Department of Telecommunications (DoT) aimed at empowering mobile subscribers, enhancing their security, and creating awareness about important telecom initiatives.</p>
     </section>
 
-    <section>
-        <h2>Services Offered</h2>
-        <ul>
-            <li><strong>CHAKSHU:</strong> Report suspected fraud and suspicious communications.</li>
-            <li><strong>CEIR:</strong> Block your lost or stolen mobile device through the Central Equipment Identity Register.</li>
-            <li><strong>TAFCOP:</strong> Know your mobile connections and check for unauthorized usage.</li>
-            <li><strong>KYM:</strong> Verify your mobile's IMEI number and ensure it's not counterfeit.</li>
-            <li><strong>RICWIN:</strong> Report international calls received with an Indian number.</li>
-            <li><strong>KYI:</strong> Find out your wireless internet provider (ISP).</li>
-        </ul>
-    </section>
+    <section class="services-section">
+        <!-- Service 1: CHAKSHU -->
+        <div class="service-box chakshu">
+            <h2>CHAKSHU</h2>
+            <p><a href="https://www.sancharsaathi.gov.in/sfc" target="_blank" style="color:white; text-decoration:underline;">Report suspected fraud and communication-related issues.</a></p>
+        </div>
 
-    <section>
-        <h2>Useful Links</h2>
-        <ul>
-            <li><a href="https://www.sancharsaathi.gov.in" target="_blank">Sanchar Saathi Official Website</a></li>
-            <li><a href="https://ceir.sancharsaathi.gov.in" target="_blank">CEIR - Block your mobile</a></li>
-            <li><a href="https://tafcop.sancharsaathi.gov.in" target="_blank">TAFCOP - Know your connections</a></li>
-        </ul>
+        <!-- Service 2: CEIR -->
+        <div class="service-box ceir">
+            <h2>CEIR</h2>
+            <p><a href="https://www.ceir.sancharsaathi.gov.in" target="_blank" style="color:white; text-decoration:underline;">Block your lost or stolen mobile through the Central Equipment Identity Register (CEIR).</a></p>
+        </div>
+
+        <!-- Service 3: TAFCOP -->
+        <div class="service-box tafcop">
+            <h2>TAFCOP</h2>
+            <p><a href="https://www.tafcop.sancharsaathi.gov.in" target="_blank" style="color:white; text-decoration:underline;">Check all the mobile connections linked to your name with TAFCOP.</a></p>
+        </div>
+
+        <!-- Service 4: KYM -->
+        <div class="service-box kym">
+            <h2>KYM</h2>
+            <p><a href="https://ceir.sancharsaathi.gov.in/Device/SancharSaathiKym.jsp" target="_blank" style="color:white; text-decoration:underline;">Verify your mobile’s IMEI status and authenticity.</a></p>
+        </div>
+
+        <!-- Service 5: RICWIN -->
+        <div class="service-box ricwin">
+            <h2>RICWIN</h2>
+            <p><a href="https://www.sancharsaathi.gov.in/InternationalCall/ReportIntCall.jsp" target="_blank" style="color:white; text-decoration:underline;">Report international calls with Indian numbers.</a></p>
+        </div>
+
+        <!-- Service 6: KYI -->
+        <div class="service-box kyi">
+            <h2>KYI</h2>
+            <p><a href="https://www.sancharsaathi.gov.in/KnowYourIsp/display-isps.jsp" target="_blank" style="color:white; text-decoration:underline;">Know your wireless internet provider (ISP).</a></p>
+        </div>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2024 Sanchar Saathi Info. Created using GitHub Pages.</p>
+    <p>&copy; 2024 Sanchar Saathi Info | <a href="https://www.sancharsaathi.gov.in" target="_blank">Visit Official Site</a></p>
+    <p>Webpage made by <a href="https://www.github.com/Ram5anthosh">Ram Santhosh</a> and <a href="https://github.com/iamvikramjeet1910">Vikram Kumar</a> students of Indian Institute of Information Technology, Allahabad. and </p>
 </footer>
 
 </body>
