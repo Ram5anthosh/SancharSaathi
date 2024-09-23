@@ -82,6 +82,66 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .slides {
+            display: none;
+            text-align: center;
+        }
+        .slides img {
+            max-width: 800px; /* Maximum width of the image */
+            max-height: 400px; /* Maximum height of the image */
+            width: auto;
+            height: auto;
+            align-items: center;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev {
+            left: 0;
+        }
+        .dots {
+            text-align: center;
+            padding: 10px;
+            background: #f4f4f9;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
     </style>
 </head>
 <body>
@@ -108,13 +168,13 @@
         <!-- Service 2: CEIR -->
         <div class="service-box ceir">
             <h2>CEIR</h2>
-            <p><a href="https://www.ceir.sancharsaathi.gov.in" target="_blank" style="color:white; text-decoration:underline;">Block your lost or stolen mobile through the Central Equipment Identity Register (CEIR).</a></p>
+            <p><a href="https://ceir.sancharsaathi.gov.in/Home/index.jsp" target="_blank" style="color:white; text-decoration:underline;">Block your lost or stolen mobile through the Central Equipment Identity Register (CEIR).</a></p>
         </div>
 
         <!-- Service 3: TAFCOP -->
         <div class="service-box tafcop">
             <h2>TAFCOP</h2>
-            <p><a href="https://www.tafcop.sancharsaathi.gov.in" target="_blank" style="color:white; text-decoration:underline;">Check all the mobile connections linked to your name with TAFCOP.</a></p>
+            <p><a href="https://tafcop.sancharsaathi.gov.in/telecomUser/" target="_blank" style="color:white; text-decoration:underline;">Check all the mobile connections linked to your name with TAFCOP.</a></p>
         </div>
 
         <!-- Service 4: KYM -->
@@ -135,12 +195,107 @@
             <p><a href="https://www.sancharsaathi.gov.in/KnowYourIsp/display-isps.jsp" target="_blank" style="color:white; text-decoration:underline;">Know your wireless internet provider (ISP).</a></p>
         </div>
     </section>
+    <section>
+        <h2>Our Public Awareness Programme</h2>
+        
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slides">
+                <img src="assets/IMG_8635.jpg" alt="Image 1">
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slides">
+                <img src="assets/IMG_8669.jpg" alt="Image 2">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slides">
+                <img src="assets/IMG_8671.jpg" alt="Image 3">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slides">
+                <img src="assets/IMG_8683.jpg" alt="Image 4">
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slides">
+                <img src="assets/IMG_8688.jpg" alt="Image 5">
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slides">
+                <img src="assets/IMG_8693.jpg" alt="Image 6">
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slides">
+                <img src="assets/IMG_8697.jpg" alt="Image 7">
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slides">
+                <img src="assets/IMG_8698.jpg" alt="Image 8">
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="slides">
+                <img src="assets/IMG_8709.jpg" alt="Image 9">
+            </div>
+
+            <!-- Slide 10 -->
+            <div class="slides">
+                <img src="assets/IMG_8713.jpg" alt="Image 10">
+            </div>
+            
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+    </section>
 </main>
 
 <footer>
     <p>&copy; 2024 Sanchar Saathi Info | <a href="https://www.sancharsaathi.gov.in" target="_blank">Visit Official Site</a></p>
-    <p>Webpage made by <a href="https://www.github.com/Ram5anthosh">Ram Santhosh</a> and <a href="https://github.com/iamvikramjeet1910">Vikram Kumar</a> students of Indian Institute of Information Technology, Allahabad. and </p>
+    <p>Webpage made by <a href="https://www.github.com/Ram5anthosh">Ram Santhosh</a> and <a href="https://github.com/iamvikramjeet1910">Vikram Kumar</a> students of Indian Institute of Information Technology, Allahabad. </p>
+    <p>Under the supervision of <a href="https://sites.google.com/a/iiita.ac.in/suneelyadav/">Dr.Suneel Yadav</a> in collaboration with Department of Tele-Communications, GoI.</p>
 </footer>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+
+    // Auto slide
+    setInterval(function() {
+        plusSlides(1);
+    }, 4000); // Change slide every 4 seconds
+</script>
 
 </body>
 </html>
